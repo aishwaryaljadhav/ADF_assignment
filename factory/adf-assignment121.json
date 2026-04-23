@@ -1,0 +1,15 @@
+{
+	"name": "adf-assignment121",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Enabled",
+			"editable": true
+		}
+	},
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "fc9b846f-b4bc-495f-a3ac-459775cc57a2",
+		"tenantId": "1afd0351-c8fc-42ac-8f82-53c5eeb3af80"
+	}
+}

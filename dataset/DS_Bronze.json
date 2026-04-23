@@ -1,0 +1,38 @@
+{
+	"name": "DS_Bronze",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "adf_dl",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"bronzeFolderPath": {
+				"type": "string"
+			},
+			"bronzeFileName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().bronzeFileName",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@dataset().bronzeFolderPath",
+					"type": "Expression"
+				},
+				"fileSystem": "bronze"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
